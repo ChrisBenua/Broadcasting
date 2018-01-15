@@ -19,12 +19,14 @@ public class MainActivity extends AppCompatActivity {
 
         FirebaseApp.initializeApp(this);
 
+        String s= "{type=1, cmd=0, uid=0, data=obamachmo}";
+        MyBroadCastReceiver.parse(s);
        // ServerMessage a = new ServerMessage();
         //Map<String, String> mp = new HashMap<>();
         //mp.put("kek", "lol");
         //Log.d("lel", mp.toString());
-        FirebaseInstanceId kek = FirebaseInstanceId.getInstance();
-        Log.d("token", kek.getToken());
+        //FirebaseInstanceId kek = FirebaseInstanceId.getInstance();
+        //Log.d("token", kek.getToken());
         //a = ServerMessage.convertFromJson("{ \"type\": 0, \"cmd\": 0, \"uid\": 2, \"data\": \"\" }");
         //Log.d("kek",a.getUid() + " " + a.getCmd() + " " + a.getType() + " " + a.getData());
     }
