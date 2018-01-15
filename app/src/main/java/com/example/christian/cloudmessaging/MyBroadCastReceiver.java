@@ -12,9 +12,7 @@ import android.util.Log;
 public class MyBroadCastReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        Log.d("lel", intent.getStringExtra("message"));
-
-
+        ServerMessage res = intent.getParcelableExtra("message");
     }
 
     static public ServerMessage parse(String s) {

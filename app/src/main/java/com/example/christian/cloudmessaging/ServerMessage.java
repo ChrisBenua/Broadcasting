@@ -34,6 +34,7 @@ public class ServerMessage implements Parcelable {
         this.uid = uid;
     }
 
+
     public String getData() {
         return data;
     }
