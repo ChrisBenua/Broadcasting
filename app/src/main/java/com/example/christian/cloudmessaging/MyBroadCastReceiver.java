@@ -14,6 +14,7 @@ public class MyBroadCastReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         Log.d("lel", intent.getStringExtra("message"));
 
+
     }
 
     static public ServerMessage parse(String s) {
