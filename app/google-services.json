@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "480821030141",
+    "firebase_url": "https://cloudmessagin-b6a07.firebaseio.com",
+    "project_id": "cloudmessagin-b6a07",
+    "storage_bucket": "cloudmessagin-b6a07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480821030141:android:92fd45a52c8c2c1f",
+        "android_client_info": {
+          "package_name": "com.example.christian.cloudmessaging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480821030141-n74lsbgdfjn90bh1lr9cb3s3en3pe6d1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHN2hY9sXsn6nc6uum3GXkxLM6PQoLK-A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
