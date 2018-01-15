@@ -10,9 +10,20 @@ import android.util.Log;
  */
 
 public class MyBroadCastReceiver extends BroadcastReceiver {
+    public interface OnMessageReceived {
+        void onMessageReceived(ServerMessage s);
+    }
+
+    private static OnMessageReceived callback;
+
+    public static void setCallback(OnMessageReceived kek) {
+        callback = kek;
+    }
+
     @Override
     public void onReceive(Context context, Intent intent) {
         ServerMessage res = intent.getParcelableExtra("message");
+        callback.onMessageReceived(res);
     }
 
     static public ServerMessage parse(String s) {

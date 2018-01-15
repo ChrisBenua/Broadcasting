@@ -16,11 +16,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        final ServerMessage[] serverMessage = new ServerMessage[1];
         FirebaseApp.initializeApp(this);
-
-        String s= "{type=1, cmd=0, uid=0, data=obamachmo}";
-        MyBroadCastReceiver.parse(s);
+        MyBroadCastReceiver.setCallback(new MyBroadCastReceiver.OnMessageReceived() {
+            @Override
+            public void onMessageReceived(ServerMessage s) {
+                serverMessage[0] = s;
+            }
+        });
+        //String s= "{type=1, cmd=0, uid=0, data=obamachmo}";
+       // MyBroadCastReceiver.parse(s);
        // ServerMessage a = new ServerMessage();
         //Map<String, String> mp = new HashMap<>();
         //mp.put("kek", "lol");
