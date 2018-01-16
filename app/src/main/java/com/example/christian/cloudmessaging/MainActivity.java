@@ -6,6 +6,7 @@ import android.util.Log;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,8 +17,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         final ServerMessage[] serverMessage = new ServerMessage[1];
         FirebaseApp.initializeApp(this);
+        FirebaseMessaging.getInstance().subscribeToTopic("achiev");
+
         MyBroadCastReceiver.setCallback(new MyBroadCastReceiver.OnMessageReceived() {
             @Override
             public void onMessageReceived(ServerMessage s) {
